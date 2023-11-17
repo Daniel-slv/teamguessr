@@ -1,0 +1,36 @@
+/* GENERAL */
+
+@font-face{
+    font-family: 'superCorn';
+    src: url(./fonts/super-corn.ttf);
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'superCorn', sans-serif;
+    background-image: url(./assets/background-image.png);
+    background-size: cover;
+}
+
+/* HEADER */
+
+#settings-button{
+    position: absolute;
+    top: 1rem;
+    left: 2rem;
+    aspect-ratio: 1;
+    width: 2rem;
+    border: 0;
+    background: url(./assets/settings-icon.svg);
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
