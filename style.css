@@ -19,16 +19,18 @@ body{
     font-family: 'superCorn', sans-serif;
     background-image: url(./assets/background-image.png);
     background-size: cover;
+    overflow-x: hidden ;
 }
 
 .button{
     cursor: pointer;
 }
 
-/* HEADER */
+/* MAIN HEADER */
 
 #project-header{
-    background-color: #02220e;
+    background: rgb(5,70,29);
+    background: linear-gradient(90deg, rgba(5,70,29,1) 10%, rgba(2,34,14,1) 50%, rgba(5,70,29,1) 90%); 
 }
 
 #settings-button{
@@ -63,4 +65,54 @@ body{
     border: 0;
     background: url(./assets/hamburger-icon.svg);
     background-repeat: no-repeat;
+    z-index: 99;
+}
+
+/* NAVIGATION MENU */
+
+#navigation-menu{
+    position: fixed;
+    display: block;
+    top: 0;
+    right: -100%;
+    width: 30%;
+    z-index: 98;
+    background: rgba(5, 70, 29, 0.58);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2.9px);
+    -webkit-backdrop-filter: blur(2.9px);
+    border: 1px solid rgba(5, 70, 29, 1);
+    text-align: center;
+    transition: 0.2s;
+    padding-top: 3rem;
+    cursor: default;
+}
+
+#navigation-menu.is-active{
+    right: 0;
+}
+
+#navigation-menu a{
+    font-size: 1.25rem;
+    display: block;
+    text-decoration: none;
+    color: #ffd800;
+    letter-spacing: 0.25rem;
+    padding: 1rem;
+}
+
+#navigation-menu a::after {
+    content: '';
+    width: 50%;
+    height: 1px;
+    margin: auto;
+    background: #ffd800 transparent;
+    transition: 400ms;
+    display: block;
+  }
+
+#navigation-menu a:hover::after{
+    background-color: #ffd800;
+    display: block;
 }
