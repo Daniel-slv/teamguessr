@@ -9,6 +9,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 html{
@@ -29,6 +30,9 @@ body{
 /* MAIN HEADER */
 
 #project-header{
+
+    /* Header Gradient */
+
     background: rgb(5,70,29);
     background: linear-gradient(90deg, rgba(5,70,29,1) 10%, rgba(2,34,14,1) 50%, rgba(5,70,29,1) 90%); 
 }
@@ -54,6 +58,9 @@ body{
     width: 3.5rem;
     margin-top: 0.4rem;
     margin-bottom: 0.3rem;
+    drop-shadow: inset -100px 10px 80px 20px #080707,
+    0 0 40px 10px #ffd800;
+
 }
 
 #hamburger-button{
@@ -68,6 +75,10 @@ body{
     z-index: 99;
 }
 
+#hamburger-button.is-active{
+    background: url(./assets/close-icon.svg);
+}
+
 /* NAVIGATION MENU */
 
 #navigation-menu{
@@ -75,18 +86,22 @@ body{
     display: block;
     top: 0;
     right: -100%;
-    width: 30%;
+    width: 40%;
+    max-width: 20rem;
     z-index: 98;
+    text-align: center;
+    transition: 0.2s;
+    padding-top: 3rem;
+    cursor: default;
+
+    /* Glass Background */
+
     background: rgba(5, 70, 29, 0.58);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(2.9px);
     -webkit-backdrop-filter: blur(2.9px);
     border: 1px solid rgba(5, 70, 29, 1);
-    text-align: center;
-    transition: 0.2s;
-    padding-top: 3rem;
-    cursor: default;
 }
 
 #navigation-menu.is-active{
@@ -102,7 +117,7 @@ body{
     padding: 1rem;
 }
 
-#navigation-menu a::after {
+#navigation-menu a::after{
     content: '';
     width: 50%;
     height: 1px;
@@ -110,9 +125,63 @@ body{
     background: #ffd800 transparent;
     transition: 400ms;
     display: block;
-  }
+}
 
 #navigation-menu a:hover::after{
     background-color: #ffd800;
     display: block;
+}
+
+/* MAIN */
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#game-container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    width: 32rem;
+    height: 80vh;
+    border-radius: 15px;
+    border: 0.15rem solid #ffd800;
+    background-color: #02220e;
+}
+
+#inside-game-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25rem;
+    height: 60vh;
+    border-radius: 10px;
+    background-color: #05461d;
+}
+
+#start-game-button{
+    padding: 16px 31px;
+    font-family: superCorn;
+    font-size: 1.5rem;
+    letter-spacing: 0.25rem;
+    text-decoration: none;
+    color: #ffd900;
+	border-radius: 10px;
+	border: 3px solid #ffd900;
+    background-color: #05461d;
+    transition: 250ms;
+}
+
+#start-game-button:hover{
+    background-color: #02220e;
+}
+
+#answer-input{
+    position: absolute;
+    width: 65%;
+    bottom: 1rem;
 }
