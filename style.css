@@ -27,6 +27,10 @@ body{
     cursor: pointer;
 }
 
+.hidden-at-start{
+    display: none;
+}
+
 /* MAIN HEADER */
 
 #project-header{
@@ -196,8 +200,7 @@ main{
     line-height: 1.35rem;
     outline: none;
     text-align: center;
-    opacity: 0;
-    pointer-events: none;
+    display: none;
 }
 
 #answer-input:focus{
@@ -209,18 +212,14 @@ main{
 
 #tutorial-popup{
     position: absolute;
+    flex-direction: column;
     width: 30rem;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     padding: 0.2rem;
     border-radius: 10px;
     background-color: rgb(240, 240, 240);
     color: #02220e;
     box-sizing: border-box;
-    opacity: 0;
-    pointer-events: none;
-
+    display: none;
 }
 
 h2{
