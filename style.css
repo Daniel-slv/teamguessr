@@ -28,7 +28,8 @@ body{
 }
 
 .hidden-at-start{
-    display: none;
+    opacity: 0;
+    pointer-events: none;
 }
 
 /* MAIN HEADER */
@@ -79,7 +80,7 @@ body{
     z-index: 99;
 }
 
-#hamburger-button.is-active{
+#hamburger-button.active{
     background: url(./assets/close-icon.svg);
 }
 
@@ -108,7 +109,7 @@ body{
     border: 1px solid rgba(5, 70, 29, 1);
 }
 
-#navigation-menu.is-active{
+#navigation-menu.active{
     right: 0;
 }
 
@@ -155,6 +156,13 @@ main{
     border-radius: 15px;
     border: 0.15rem solid #ffd800;
     background-color: #02220e;
+    box-shadow: 5px 6px 8px 0px rgba(0, 0, 0, 0.82);
+    transition: 0.3s ease;
+}
+
+#game-container.active{
+    filter: blur(6px);
+    pointer-events: auto;
 }
 
 #inside-game-container{
@@ -219,7 +227,13 @@ main{
     background-color: rgb(240, 240, 240);
     color: #02220e;
     box-sizing: border-box;
-    display: none;
+    box-shadow: 5px 6px 8px 0px rgba(0, 0, 0, 0.82);
+    transition: all 0.3s ease;
+}
+
+#tutorial-popup.active{
+    opacity: 1;
+    pointer-events: auto;
 }
 
 h2{
