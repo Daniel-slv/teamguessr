@@ -169,6 +169,7 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     width: 25rem;
     height: 60vh;
     border-radius: 10px;
@@ -214,6 +215,33 @@ main{
 #answer-input:focus{
     outline: 2px solid #ffd800;
     color: white;
+}
+
+#score-container{
+    position: absolute;
+    top: 1.2rem;
+    right: 3.25rem;
+}
+
+#score-container p{
+    font-size: 1.5rem;
+    color: #ffd800;
+}
+
+#title-list{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 2rem;
+}
+
+#title-list li{
+    padding: 1.25rem;
+    font-size: 1.25rem;
+    letter-spacing: 0.1rem;
+    color: rgb(240, 240, 240);
+
 }
 
 /* TUTORIAL POPUP */
