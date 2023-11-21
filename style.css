@@ -53,7 +53,13 @@ body{
     background-repeat: no-repeat;
 }
 
-#logo-container{
+#settings-button.active{
+    -ms-transform: rotate(-70deg);
+    -webkit-transform: rotate(-70deg);
+    transform: rotate(-70deg);
+}
+
+#logo-container{    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -193,6 +199,11 @@ main{
     background-color: #02220e;
 }
 
+#start-game-button.ongoing-game{
+    opacity: 0;
+    pointer-events: none;
+}
+
 #answer-input{
     position: absolute;
     width: 65%;
@@ -223,6 +234,12 @@ main{
     right: 3.25rem;
 }
 
+#score-container.ongoing-game{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
 #score-container p{
     font-size: 1.5rem;
     color: #ffd800;
@@ -231,9 +248,10 @@ main{
 #title-list{
     position: absolute;
     display: flex;
+    top: 7rem;
     justify-content: center;
     flex-direction: column;
-    margin-left: 2rem;
+    margin-left: 1.5rem;
 }
 
 #title-list li{
@@ -258,6 +276,13 @@ main{
     box-shadow: 5px 6px 8px 0px rgba(0, 0, 0, 0.82);
     transition: all 0.3s ease;
 }
+
+@media screen and (max-width: 500px) {
+    #tutorial-popup{
+        width: 90vw;
+    }
+}
+
 
 #tutorial-popup.active{
     opacity: 1;
