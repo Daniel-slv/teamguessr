@@ -10,5 +10,5 @@ hamburgerButton.addEventListener('click', () =>{
 })
 
 settingsButton.onclick = () => {
-    settingsButton.classList.add('active');
+    settingsButton.classList.toggle('active');
 }
