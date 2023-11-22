@@ -159,7 +159,7 @@ main{
     margin-top: 2rem;
     width: 32rem;
     height: 80vh;
-    border-radius: 15px;
+    border-radius: 10px;
     border: 0.15rem solid #ffd800;
     background-color: #02220e;
     box-shadow: 5px 6px 8px 0px rgba(0, 0, 0, 0.82);
@@ -213,14 +213,18 @@ main{
     letter-spacing: 0.1rem;
     color: rgb(189, 189, 189);
     padding: 0.5rem;
-    border-radius: 10px;
+    border-radius: 7px;
     border: 1px solid #ffd800;
     box-sizing: border-box;
     background: none;
     line-height: 1.35rem;
     outline: none;
     text-align: center;
-    display: none;
+}
+
+#answer-input.ongoing-game{
+    opacity: 1;
+    pointer-events: auto;
 }
 
 #answer-input:focus{
