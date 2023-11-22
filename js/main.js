@@ -1,3 +1,7 @@
+import {teamList} from './teamlist.js';
+
+/* Selecting some HTML elements */
+
 const startGameButton = document.querySelector('#start-game-button');
 const tutorialPopup = document.querySelector('#tutorial-popup');
 const gameContainer = document.querySelector('#game-container');
@@ -20,6 +24,16 @@ continueButton.onclick = () => {
     answerInput.classList.add('ongoing-game');
 }
 
-
 let score = 0;
 let questionCount = 0;
+let teamToBeGuessed = "";
+defineTeamToBeGuessed();
+
+function defineTeamToBeGuessed(){
+    const teams = Object.keys(teamList);
+    const len = teams.length;
+    const rnd = Math.floor(Math.random() * len);
+    const team = teamList[teams[rnd]];
+    teamToBeGuessed = team.name;
+}
+

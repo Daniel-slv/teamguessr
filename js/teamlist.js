@@ -1,4 +1,4 @@
-let teamList = {
+export const teamList = {
     Barcelona: {
         id: '001',
         region: 'UEFA',
