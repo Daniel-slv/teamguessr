@@ -1,11 +1,12 @@
 /* Selecting some HTML elements */
 
-const startGameButton = document.querySelector('#start-game-button');
+export const startGameButton = document.querySelector('#start-game-button');
 const tutorialPopup = document.querySelector('#tutorial-popup');
 const gameContainer = document.querySelector('#game-container');
 const continueButton = document.querySelector('#continue-button');
 const scoreText = document.querySelector('#score-container');
 const answerInput = document.querySelector('#answer-input');
+const titleList = document.querySelector('#title-list');
 
 /* Buttons behavior */
 
@@ -20,6 +21,7 @@ continueButton.onclick = () => {
     startGameButton.classList.add('ongoing-game');
     scoreText.classList.add('ongoing-game');
     answerInput.classList.add('ongoing-game');
+    titleList.classList.add('ongoing-game')
 }
 
 
