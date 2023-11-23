@@ -257,7 +257,7 @@ main{
     display: block;
     position: absolute;
     top: 3.5rem;
-    left: 4.15rem;
+    left: 4.45rem;
     list-style: disc;
     list-style-position: outside;
     width: 90%;
@@ -269,7 +269,7 @@ main{
 }
 
 #title-list li{
-    padding: 1.25rem;
+    padding: 1.25rem 0;
     text-align: left;
     font-size: 1.25rem;
     letter-spacing: 0.1rem;
