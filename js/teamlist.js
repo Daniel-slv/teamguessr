@@ -98,5 +98,4 @@ export const teamList = {
         uclOrLibertadoresTitles: 0,
         clubWorldCupTitles: 0
     }
-
 }
