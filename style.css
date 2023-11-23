@@ -172,10 +172,13 @@ main{
 }
 
 #inside-game-container{
+    position: relative;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    text-align: center;
     width: 25rem;
     height: 60vh;
     border-radius: 10px;
@@ -183,6 +186,7 @@ main{
 }
 
 #start-game-button{
+    position: absolute;
     padding: 16px 31px;
     font-family: superCorn;
     font-size: 1.5rem;
@@ -250,12 +254,13 @@ main{
 }
 
 #title-list{
+    display: block;
     position: absolute;
-    display: flex;
-    top: 7rem;
-    justify-content: center;
-    flex-direction: column;
-    margin-left: 1.5rem;
+    top: 3.5rem;
+    left: 4.15rem;
+    list-style: disc;
+    list-style-position: outside;
+    width: 90%;
 }
 
 #title-list.ongoing-game{
@@ -265,10 +270,10 @@ main{
 
 #title-list li{
     padding: 1.25rem;
+    text-align: left;
     font-size: 1.25rem;
     letter-spacing: 0.1rem;
     color: rgb(240, 240, 240);
-
 }
 
 /* TUTORIAL POPUP */
