@@ -287,7 +287,6 @@ main{
     }
 }
 
-
 #tutorial-popup.active{
     opacity: 1;
     pointer-events: auto;
