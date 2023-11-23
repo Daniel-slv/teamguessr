@@ -258,6 +258,11 @@ main{
     margin-left: 1.5rem;
 }
 
+#title-list.ongoing-game{
+    opacity: 1;
+    pointer-events: 1;
+}
+
 #title-list li{
     padding: 1.25rem;
     font-size: 1.25rem;
