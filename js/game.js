@@ -19,11 +19,11 @@ function defineTeamToBeGuessed(){
 
 function showTitles(rnd){;
     let teamToBeGuessedTitles = `<li>${teamList[teams[rnd]].nationalLeagueTitles} National League Titles</li>
-    <li>X National Cup Titles</li>
-    <li>X UCL / Libertadores Titles</li>
-    <li>X Club World Cup Titles</li>`;
+    <li>${teamList[teams[rnd]].nationalCupTitles} National Cup Titles</li>
+    <li>${teamList[teams[rnd]].uclOrLibertadoresTitles} UCL / Libertadores Titles</li>
+    <li>${teamList[teams[rnd]].clubWorldCupTitles} Club World Cup Titles</li>`;
 
     titleList.innerHTML = teamToBeGuessedTitles;
 }
 
-console.log(teamToBeGuessed);
+console.log(rnd);
