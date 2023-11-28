@@ -1,21 +1,37 @@
-import {teamList} from './teamlist.js';
+// IMPORTING THE TEAMS AND THE BUTTONS VARIABLES
 
-let teamToBeGuessed = "";
-let rnd = 0;
-let teams = 0;
-const titleList = document.querySelector('#title-list');
-const continueButton = document.querySelector('#continue-button');
-defineTeamToBeGuessed();
-showTitles(rnd);
+import {teamList} from './teamlist.js';
+import {startGameButton, tutorialPopup, gameContainer, continueButton, scoreText, answerInput, titleList} from './buttons.js';
+
+// BUTTONS BEHAVIOR
+
+continueButton.onclick = () => {
+    titleList.classList.add('ongoing-game');
+    tutorialPopup.classList.remove('active');
+    gameContainer.classList.remove('active');
+    startGameButton.classList.add('ongoing-game');
+    scoreText.classList.add('ongoing-game');
+    answerInput.classList.add('ongoing-game');
+    titleList.classList.add('ongoing-game')
+}
+
+startGameButton.onclick = () => {
+    tutorialPopup.classList.add('active');
+    gameContainer.classList.add('active');
+}
+
 
 function defineTeamToBeGuessed(){
-    teams = Object.keys(teamList);
+    const teams = Object.keys(teamList);
     const len = teams.length;
-    rnd = Math.floor(Math.random() * len);
-    let team = teamList[teams[rnd]];
-    teamToBeGuessed = team.name;
-    return rnd;
+    const rnd = Math.floor(Math.random() * len);
+    const team = teamList[teams[rnd]];
+    //const teamToBeGuessed = team.name;
+    return team;
 }
+
+defineTeamToBeGuessed();
+const team = defineTeamToBeGuessed();
 
 function showTitles(rnd){;
     let teamToBeGuessedTitles = `<li>${teamList[teams[rnd]].nationalLeagueTitles} National League Titles</li>
@@ -26,4 +42,8 @@ function showTitles(rnd){;
     titleList.innerHTML = teamToBeGuessedTitles;
 }
 
-console.log(rnd);
+console.log(team.nationalCupTitles);
+
+
+
+
