@@ -208,8 +208,35 @@ main{
     pointer-events: none;
 }
 
-#answer-input{
+#inputs-container{
     position: absolute;
+    height: 3rem;
+    width: 24rem;
+    bottom: 0.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#check-button{
+    margin: 1rem;
+	background-color:#05461d;
+	border-radius: 50%;
+	border:3px solid #ffd900;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffd900;
+	font-family:Arial;
+	font-size:28px;
+	font-weight:bold;
+	padding: 0.3rem 0.8rem;
+	text-decoration:none;
+}
+#check-button:hover {
+	background-color:#02220e;
+}
+
+#answer-input{
     width: 65%;
     bottom: 0.8rem;
     font-family: superCorn;
