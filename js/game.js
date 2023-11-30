@@ -26,12 +26,32 @@ function defineTeamToBeGuessed(){
     const len = teams.length;
     const rnd = Math.floor(Math.random() * len);
     const team = teamList[teams[rnd]];
-    //const teamToBeGuessed = team.name;
     return team;
 }
 
-defineTeamToBeGuessed();
 const team = defineTeamToBeGuessed();
+const teamName = team.name.toLowerCase();
+
+
+
+const checkButton = document.querySelector("#check-button");
+
+//defineTeamToBeGuessed();
+
+
+function checkAnswer(){
+    const textInput = document.getElementById("answer-input");
+    if((textInput.value == team.name.toLowerCase())){
+    document.getElementById('result').innerHTML= 'correct';
+    }
+    else{
+    document.getElementById('result').innerHTML= 'wrong';
+    }
+}
+
+function clearSpan(){
+    document.getElementById('result').innerHTML= '';
+}
 
 function showTitles(rnd){;
     let teamToBeGuessedTitles = `<li>${teamList[teams[rnd]].nationalLeagueTitles} National League Titles</li>
@@ -41,8 +61,10 @@ function showTitles(rnd){;
 
     titleList.innerHTML = teamToBeGuessedTitles;
 }
+checkButton.addEventListener("click", checkAnswer);
+answerInput.addEventListener("keydown", clearSpan);
 
-console.log(team.nationalCupTitles);
+console.log(teamName);
 
 
 
