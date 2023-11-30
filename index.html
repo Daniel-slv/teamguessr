@@ -28,7 +28,11 @@
                 <button id="start-game-button" class="button">Start Game</button>
                 <ul id="title-list" class="hidden-at-start"></ul>
             </div> 
-            <input type="text" placeholder="Your guess" id="answer-input" class="hidden-at-start">
+            <div id="inputs-container">
+                <input type="text" placeholder="Your guess" id="answer-input" class="hidden-at-start">
+                <input type="button" id="check-button" value=">"><span id="result"></span>
+            </div>
+            
         </div>
         <div id="tutorial-popup" class="hidden-at-start">
             <h2>Quick tutorial</h2>
