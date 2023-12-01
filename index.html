@@ -21,18 +21,15 @@
     </header>
     <main>
         <div id="game-container">
-            <div id="score-container" class="hidden-at-start">
-                <p>Score: 0</p>
-            </div>
             <div id="inside-game-container">
                 <button id="start-game-button" class="button">Start Game</button>
                 <ul id="title-list" class="hidden-at-start"></ul>
             </div> 
-            <div id="inputs-container">
-                <input type="text" placeholder="Your guess" id="answer-input" class="hidden-at-start">
-                <input type="button" id="check-button" value=">"><span id="result"></span>
+            <div id="inputs-container" class="hidden-at-start">
+                <input type="text" placeholder="Your guess" id="answer-input">
+                <input type="button" id="check-button" value=">">
             </div>
-            
+            <span id="result"></span>
         </div>
         <div id="tutorial-popup" class="hidden-at-start">
             <h2>Quick tutorial</h2>
