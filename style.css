@@ -69,9 +69,7 @@ body{
     width: 3.5rem;
     margin-top: 0.4rem;
     margin-bottom: 0.3rem;
-    drop-shadow: inset -100px 10px 80px 20px #080707,
     0 0 40px 10px #ffd800;
-
 }
 
 #hamburger-button{
@@ -216,13 +214,19 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
+    box-sizing: border-box;
+}
+
+#inputs-container.ongoing-game{
+    opacity: 1;
+    pointer-events: auto;
 }
 
 #check-button{
-    margin: 1rem;
+    margin-left: 3rem;
 	background-color:#05461d;
 	border-radius: 50%;
-	border:3px solid #ffd900;
+	border: 2px solid #ffd900;
 	display:inline-block;
 	cursor:pointer;
 	color:#ffd900;
@@ -232,8 +236,20 @@ main{
 	padding: 0.3rem 0.8rem;
 	text-decoration:none;
 }
+
 #check-button:hover {
 	background-color:#02220e;
+}
+
+#result{
+    position: absolute;
+    margin: 0 auto;
+    top: 1.2rem;
+    text-justify: newspaper;
+    font-size: 2rem;
+    letter-spacing: 0.2rem;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 2px rgb(80, 80, 80);
 }
 
 #answer-input{
@@ -246,16 +262,11 @@ main{
     padding: 0.5rem;
     border-radius: 7px;
     border: 1px solid #ffd800;
-    box-sizing: border-box;
+    box-sizing:  border-box;
     background: none;
     line-height: 1.35rem;
     outline: none;
     text-align: center;
-}
-
-#answer-input.ongoing-game{
-    opacity: 1;
-    pointer-events: auto;
 }
 
 #answer-input:focus{
@@ -292,7 +303,7 @@ main{
 
 #title-list.ongoing-game{
     opacity: 1;
-    pointer-events: 1;
+    pointer-events: auto;
 }
 
 #title-list li{
