@@ -1,7 +1,7 @@
 // IMPORTING THE TEAMS AND THE BUTTONS VARIABLES
 
 import {teamList} from './teamlist.js';
-import {startGameButton, tutorialPopup, gameContainer, continueButton, scoreText, answerInput, titleList} from './buttons.js';
+import {startGameButton, tutorialPopup, gameContainer, continueButton, scoreText, answerInput, titleList, inputsContainer} from './buttons.js';
 
 // BUTTONS BEHAVIOR
 
@@ -10,16 +10,15 @@ continueButton.onclick = () => {
     tutorialPopup.classList.remove('active');
     gameContainer.classList.remove('active');
     startGameButton.classList.add('ongoing-game');
-    scoreText.classList.add('ongoing-game');
     answerInput.classList.add('ongoing-game');
-    titleList.classList.add('ongoing-game')
+    titleList.classList.add('ongoing-game');
+    inputsContainer.classList.add('ongoing-game')
 }
 
 startGameButton.onclick = () => {
     tutorialPopup.classList.add('active');
     gameContainer.classList.add('active');
 }
-
 
 function defineTeamToBeGuessed(){
     const teams = Object.keys(teamList);
@@ -31,21 +30,19 @@ function defineTeamToBeGuessed(){
 
 const team = defineTeamToBeGuessed();
 const teamName = team.name.toLowerCase();
-
-
+showTitles(team);
 
 const checkButton = document.querySelector("#check-button");
 
 //defineTeamToBeGuessed();
 
-
 function checkAnswer(){
     const textInput = document.getElementById("answer-input");
     if((textInput.value == team.name.toLowerCase())){
-    document.getElementById('result').innerHTML= 'correct';
+    document.getElementById('result').innerHTML= 'correct!';
     }
     else{
-    document.getElementById('result').innerHTML= 'wrong';
+    document.getElementById('result').innerHTML= 'wrong, keep trying!';
     }
 }
 
@@ -53,11 +50,11 @@ function clearSpan(){
     document.getElementById('result').innerHTML= '';
 }
 
-function showTitles(rnd){;
-    let teamToBeGuessedTitles = `<li>${teamList[teams[rnd]].nationalLeagueTitles} National League Titles</li>
-    <li>${teamList[teams[rnd]].nationalCupTitles} National Cup Titles</li>
-    <li>${teamList[teams[rnd]].uclOrLibertadoresTitles} UCL / Libertadores Titles</li>
-    <li>${teamList[teams[rnd]].clubWorldCupTitles} Club World Cup Titles</li>`;
+function showTitles(team){;
+    let teamToBeGuessedTitles = `<li>${team.nationalLeagueTitles} National League Titles</li>
+    <li>${team.nationalCupTitles} National Cup Titles</li>
+    <li>${team.uclOrLibertadoresTitles} UCL / Libertadores Titles</li>
+    <li>${team.clubWorldCupTitles} Club World Cup Titles</li>`;
 
     titleList.innerHTML = teamToBeGuessedTitles;
 }
