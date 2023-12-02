@@ -1,8 +1,6 @@
-// This is the script for the slide out menus (hamburger and settings)
+/* SCRIPT FOR THE SLIDE OUT MENUS (HAMBURGER AND SETTINGS) */
 
-const navigationMenu = document.querySelector('#navigation-menu');
-const hamburgerButton = document.querySelector('#hamburger-button');
-const settingsButton = document.querySelector('#settings-button');
+import {navigationMenu, hamburgerButton, settingsButton} from './elements.js';
 
 hamburgerButton.addEventListener('click', () =>{
     hamburgerButton.classList.toggle('active');
