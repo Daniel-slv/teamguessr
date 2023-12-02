@@ -1,9 +1,12 @@
-// IMPORTING THE TEAMS AND THE BUTTONS VARIABLES
-
 import {teamList} from './teamlist.js';
-import {startGameButton, tutorialPopup, gameContainer, continueButton, scoreText, answerInput, titleList, inputsContainer} from './buttons.js';
+import {startGameButton, tutorialPopup, gameContainer, continueButton, answerInput, titleList, inputsContainer, checkButton} from './elements.js';
 
-// BUTTONS BEHAVIOR
+// Buttons behavior:
+
+startGameButton.onclick = () => {
+    tutorialPopup.classList.add('active');
+    gameContainer.classList.add('active');
+}
 
 continueButton.onclick = () => {
     titleList.classList.add('ongoing-game');
@@ -15,10 +18,16 @@ continueButton.onclick = () => {
     inputsContainer.classList.add('ongoing-game')
 }
 
-startGameButton.onclick = () => {
-    tutorialPopup.classList.add('active');
-    gameContainer.classList.add('active');
-}
+checkButton.addEventListener("click", checkAnswer);
+
+answerInput.addEventListener("keydown", clearSpan);
+
+// Team and team name variables
+
+const team = defineTeamToBeGuessed();
+const teamName = team.name.toLowerCase();
+
+// Functions:
 
 function defineTeamToBeGuessed(){
     const teams = Object.keys(teamList);
@@ -28,17 +37,9 @@ function defineTeamToBeGuessed(){
     return team;
 }
 
-const team = defineTeamToBeGuessed();
-const teamName = team.name.toLowerCase();
-showTitles(team);
-
-const checkButton = document.querySelector("#check-button");
-
-//defineTeamToBeGuessed();
-
 function checkAnswer(){
     const textInput = document.getElementById("answer-input");
-    if((textInput.value == team.name.toLowerCase())){
+    if((textInput.value.toLowerCase() == team.name.toLowerCase())){
     document.getElementById('result').innerHTML= 'correct!';
     }
     else{
@@ -55,11 +56,13 @@ function showTitles(team){;
     <li>${team.nationalCupTitles} National Cup Titles</li>
     <li>${team.uclOrLibertadoresTitles} UCL / Libertadores Titles</li>
     <li>${team.clubWorldCupTitles} Club World Cup Titles</li>`;
-
     titleList.innerHTML = teamToBeGuessedTitles;
 }
-checkButton.addEventListener("click", checkAnswer);
-answerInput.addEventListener("keydown", clearSpan);
+
+showTitles(team);
+
+
+
 
 console.log(teamName);
 
