@@ -335,7 +335,7 @@ main{
     transition: all 0.3s ease;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
     #tutorial-popup{
         width: 90vw;
     }
@@ -349,7 +349,7 @@ main{
     }
     #title-list{
         top: 0.75rem;
-        left: 1.65rem;
+        left: 1.75rem;
     }
     #inputs-container{
         height: 1.25rem;
