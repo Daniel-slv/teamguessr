@@ -1,8 +1,6 @@
 import {teamList} from './teamlist.js';
 import {startGameButton, tutorialPopup, gameContainer, continueButton, answerInput, titleList, inputsContainer, checkButton, textInput, insideGameContainer} from './elements.js';
 
-// Buttons behavior:
-
 startGameButton.onclick = () => {
     tutorialPopup.classList.add('active');
     gameContainer.classList.add('active');
@@ -17,14 +15,9 @@ continueButton.onclick = () => {
     inputsContainer.classList.add('ongoing-game')
 }
 
-
 answerInput.addEventListener("keydown", clearSpan);
 
-// Team and team name variables
-
 let teamName = "";
-
-// Functions:
 
 function startGame(){
     const team = defineTeamToBeGuessed();
@@ -56,7 +49,7 @@ function checkAnswer(){
         const playAgainButton = document.querySelector("#play-again-button");
         playAgainButton.addEventListener("click", ()=>{
         location.reload();
-});
+        });
     }
     else{
     document.getElementById('result').innerHTML= 'wrong, keep trying!';
@@ -75,11 +68,3 @@ function showTitles(team){
     <li>${team.clubWorldCupTitles} Club World Cup Titles</li>`;
     titleList.innerHTML = teamToBeGuessedTitles;
 }
-
-$(document).on('touchstart', function(e) {
-    if (e.target.nodeName !== 'INPUT') {
-        e.preventDefault();
-    }
-});
-
-console.log(teamName);
