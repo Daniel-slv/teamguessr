@@ -32,11 +32,11 @@ export const teamList = {
         uclOrLibertadoresTitles: 0,
         clubWorldCupTitles: 0
     },
-    AtléticoMadrid: {
+    AtleticoMadrid: {
         id: '004',
         region: 'Europe',
         country: 'Spain',
-        name: 'Atlético Madrid',
+        name: 'Atletico Madrid',
         nationalLeagueTitles: 11,
         nationalCupTitles: 10,
         uelOrSudamericanaTitles: 3,
@@ -515,5 +515,159 @@ export const teamList = {
         uelOrSudamericanaTitles: 1,
         uclOrLibertadoresTitles: 0,
         clubWorldCupTitles: 0
-    }
+    },
+    NothinghamForest: {
+        id: '048',
+        region: 'Europe',
+        country: 'England',
+        name: 'Nothingham Forest',
+        nationalLeagueTitles: 1,
+        nationalCupTitles: 2,
+        uelOrSudamericanaTitles: 0,
+        uclOrLibertadoresTitles: 2,
+        clubWorldCupTitles: 0
+    },
+    Celtic: {
+        id: '049',
+        region: 'Europe',
+        country: 'Scotland',
+        name: 'Celtic',
+        nationalLeagueTitles: 53,
+        nationalCupTitles: 41,
+        uelOrSudamericanaTitles: 0,
+        uclOrLibertadoresTitles: 1,
+        clubWorldCupTitles: 0
+    },
+    PSG: {
+        id: '050',
+        region: 'Europe',
+        country: 'France',
+        name: 'PSG',
+        nationalLeagueTitles: 11,
+        nationalCupTitles: 14,
+        uelOrSudamericanaTitles: 0,
+        uclOrLibertadoresTitles: 0,
+        clubWorldCupTitles: 0
+    },
+    PSG: {
+        id: '050',
+        region: 'Europe',
+        country: 'France',
+        name: 'PSG',
+        nationalLeagueTitles: 11,
+        nationalCupTitles: 14,
+        uelOrSudamericanaTitles: 0,
+        uclOrLibertadoresTitles: 0,
+        clubWorldCupTitles: 0
+    },
+    Marseille: {
+        id: '051',
+        region: 'Europe',
+        country: 'France',
+        name: 'Marseille',
+        nationalLeagueTitles: 9,
+        nationalCupTitles: 10,
+        uelOrSudamericanaTitles: 0,
+        uclOrLibertadoresTitles: 1,
+        clubWorldCupTitles: 0
+    },
+    Lyon: {
+        id: '052',
+        region: 'Europe',
+        country: 'France',
+        name: 'Lyon',
+        nationalLeagueTitles: 7,
+        nationalCupTitles: 5,
+        uelOrSudamericanaTitles: 0,
+        uclOrLibertadoresTitles: 0,
+        clubWorldCupTitles: 0
+    },
+    SaintEtienne: {
+        id: '053',
+        region: 'Europe',
+        country: 'France',
+        name: 'Saint Etienne',
+        nationalLeagueTitles: 10,
+        nationalCupTitles: 14,
+        uelOrSudamericanaTitles: 0,
+        uclOrLibertadoresTitles: 0,
+        clubWorldCupTitles: 0
+    },
+    Monaco: {
+        id: '054',
+        region: 'Europe',
+        country: 'France',
+        name: 'Monaco',
+        nationalLeagueTitles: 8,
+        nationalCupTitles: 5,
+        uelOrSudamericanaTitles: 0,
+        uclOrLibertadoresTitles: 0,
+        clubWorldCupTitles: 0
+    },
+    Nantes: {
+        id: '055',
+        region: 'Europe',
+        country: 'France',
+        name: 'Nantes',
+        nationalLeagueTitles: 8,
+        nationalCupTitles: 4,
+        uelOrSudamericanaTitles: 0,
+        uclOrLibertadoresTitles: 0,
+        clubWorldCupTitles: 0
+    },
+    Bordeaux: {
+        id: '056',
+        region: 'Europe',
+        country: 'France',
+        name: 'Bordeaux',
+        nationalLeagueTitles: 6,
+        nationalCupTitles: 4,
+        uelOrSudamericanaTitles: 0,
+        uclOrLibertadoresTitles: 0,
+        clubWorldCupTitles: 0
+    },
+    Reims: {
+        id: '057',
+        region: 'Europe',
+        country: 'France',
+        name: 'Reims',
+        nationalLeagueTitles: 6,
+        nationalCupTitles: 2,
+        uelOrSudamericanaTitles: 0,
+        uclOrLibertadoresTitles: 0,
+        clubWorldCupTitles: 0
+    },
+    AstonVilla: {
+        id: '058',
+        region: 'Europe',
+        country: 'England',
+        name: 'Aston Villa',
+        nationalLeagueTitles: 7,
+        nationalCupTitles: 7,
+        uelOrSudamericanaTitles: 0,
+        uclOrLibertadoresTitles: 1,
+        clubWorldCupTitles: 0
+    },
+    Sampdoria: {
+        id: '059',
+        region: 'Europe',
+        country: 'Italy',
+        name: 'Sampdoria',
+        nationalLeagueTitles: 1,
+        nationalCupTitles: 4,
+        uelOrSudamericanaTitles: 0,
+        uclOrLibertadoresTitles: 0,
+        clubWorldCupTitles: 0
+    },
+    SteauaBucharest: {
+        id: '060',
+        region: 'Europe',
+        country: 'Romania',
+        name: 'Steaua Bucharest',
+        nationalLeagueTitles: 26,
+        nationalCupTitles: 23,
+        uelOrSudamericanaTitles: 0,
+        uclOrLibertadoresTitles: 1,
+        clubWorldCupTitles: 0
+    },
 }
