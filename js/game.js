@@ -43,6 +43,9 @@ function defineTeamToBeGuessed(){
 }
 
 checkButton.addEventListener("click", checkAnswer);
+checkButton.onclick = () => {
+    window.scrollTo(0, 0);
+}
 
 function checkAnswer(){
     let playerGuess = textInput.value.toLowerCase();
