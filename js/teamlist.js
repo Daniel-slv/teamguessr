@@ -515,8 +515,5 @@ export const teamList = {
         uelOrSudamericanaTitles: 1,
         uclOrLibertadoresTitles: 0,
         clubWorldCupTitles: 0
-    },
-
-    
-    
+    }
 }
