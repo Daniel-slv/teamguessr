@@ -341,7 +341,20 @@ main{
     }
     #game-container{
         width: 82vw;
-        height: 80vh;
+        height: 70vh;
+    }
+    #inside-game-container{
+        height: 55vh;
+        width: 70vw;
+    }
+    #title-list{
+        top: 0.75rem;
+        left: 1.65rem;
+    }
+    #inputs-container{
+        height: 1.25rem;
+        width: 20rem;
+        bottom: 0.9rem;
     }
 }
 
