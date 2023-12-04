@@ -305,7 +305,7 @@ export const teamList = {
         nationalCupTitles: 6,
         uelOrSudamericanaTitles: 0,
         uclOrLibertadoresTitles: 0,
-        clubWorldCupTitles: 2
+        clubWorldCupTitles: 0
     },
     Kaiserslautern: {
         id: '029',
