@@ -73,8 +73,10 @@ function showTitles(team){
     titleList.innerHTML = teamToBeGuessedTitles;
 }
 
-$(document).on('touchmove', function(e) {
-    e.preventDefault();
+$(document).on('touchstart', function(e) {
+    if (e.target.nodeName !== 'INPUT') {
+        e.preventDefault();
+    }
 });
 
 console.log(teamName);
