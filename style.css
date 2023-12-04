@@ -335,12 +335,12 @@ main{
     transition: all 0.3s ease;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
     #tutorial-popup{
         width: 90vw;
     }
     #game-container{
-        width: 90vw;
+        width: 82vw;
         height: 80vh;
     }
 }
