@@ -1,5 +1,5 @@
 import {teamList} from './teamlist.js';
-import {startGameButton, tutorialPopup, gameContainer, continueButton, answerInput, titleList, inputsContainer, checkButton} from './elements.js';
+import {startGameButton, tutorialPopup, gameContainer, continueButton, answerInput, titleList, inputsContainer, checkButton, textInput, insideGameContainer} from './elements.js';
 
 // Buttons behavior:
 
@@ -17,16 +17,22 @@ continueButton.onclick = () => {
     inputsContainer.classList.add('ongoing-game')
 }
 
-checkButton.addEventListener("click", checkAnswer);
+
 answerInput.addEventListener("keydown", clearSpan);
 
 // Team and team name variables
 
-const team = defineTeamToBeGuessed();
-const teamName = team.name.toLowerCase();
-const textInput = document.getElementById("answer-input");
+let teamName = "";
 
 // Functions:
+
+function startGame(){
+    const team = defineTeamToBeGuessed();
+    teamName = team.name.toLowerCase();
+    showTitles(team);
+}
+
+startGame();
 
 function defineTeamToBeGuessed(){
     const teams = Object.keys(teamList);
@@ -36,9 +42,18 @@ function defineTeamToBeGuessed(){
     return team;
 }
 
+checkButton.addEventListener("click", checkAnswer);
+
 function checkAnswer(){
-    if((textInput.value.toLowerCase() == team.name.toLowerCase())){
-    document.getElementById('result').innerHTML= 'correct!';
+    let playerGuess = textInput.value.toLowerCase();
+    if((playerGuess == teamName)){
+        titleList.classList.remove('ongoing-game');
+        document.getElementById('result').innerHTML= 'correct!';
+        insideGameContainer.innerHTML = `<button id="play-again-button" class="button">Play Again</button>`
+        const playAgainButton = document.querySelector("#play-again-button");
+        playAgainButton.addEventListener("click", ()=>{
+        location.reload();
+});
     }
     else{
     document.getElementById('result').innerHTML= 'wrong, keep trying!';
@@ -52,10 +67,10 @@ function clearSpan(){
 function showTitles(team){
     let teamToBeGuessedTitles = `<li>${team.nationalLeagueTitles} National League Titles</li>
     <li>${team.nationalCupTitles} National Cup Titles</li>
+    <li>${team.uelOrSudamericanaTitles} UEL / Sudamericana Titles</li>
     <li>${team.uclOrLibertadoresTitles} UCL / Libertadores Titles</li>
     <li>${team.clubWorldCupTitles} Club World Cup Titles</li>`;
     titleList.innerHTML = teamToBeGuessedTitles;
 }
 
-continueButton.addEventListener("click", showTitles(team));
 console.log(teamName);
