@@ -339,6 +339,10 @@ main{
     #tutorial-popup{
         width: 90vw;
     }
+    #game-container{
+        width: 90vw;
+        height: 80vh;
+    }
 }
 
 #tutorial-popup.active{
