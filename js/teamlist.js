@@ -350,5 +350,173 @@ export const teamList = {
         uelOrSudamericanaTitles: 1,
         uclOrLibertadoresTitles: 0,
         clubWorldCupTitles: 0
-    }
+    },
+    Liverpool: {
+        id: '033',
+        region: 'Europe',
+        country: 'England',
+        name: 'Liverpool',
+        nationalLeagueTitles: 19,
+        nationalCupTitles: 8,
+        uelOrSudamericanaTitles: 3,
+        uclOrLibertadoresTitles: 6,
+        clubWorldCupTitles: 1
+    },
+    ManchesterUnited: {
+        id: '034',
+        region: 'Europe',
+        country: 'England',
+        name: 'Manchester United',
+        nationalLeagueTitles: 20,
+        nationalCupTitles: 12,
+        uelOrSudamericanaTitles: 1,
+        uclOrLibertadoresTitles: 3,
+        clubWorldCupTitles: 1
+    },
+    Chelsea: {
+        id: '035',
+        region: 'Europe',
+        country: 'England',
+        name: 'Chelsea',
+        nationalLeagueTitles: 6,
+        nationalCupTitles: 8,
+        uelOrSudamericanaTitles: 2,
+        uclOrLibertadoresTitles: 2,
+        clubWorldCupTitles: 1
+    },
+    ManchesterCity: {
+        id: '036',
+        region: 'Europe',
+        country: 'England',
+        name: 'Manchester City',
+        nationalLeagueTitles: 9,
+        nationalCupTitles: 7,
+        uelOrSudamericanaTitles: 0,
+        uclOrLibertadoresTitles: 1,
+        clubWorldCupTitles: 0
+    },
+    Arsenal: {
+        id: '037',
+        region: 'Europe',
+        country: 'England',
+        name: 'Arsenal',
+        nationalLeagueTitles: 13,
+        nationalCupTitles: 14,
+        uelOrSudamericanaTitles: 0,
+        uclOrLibertadoresTitles: 0,
+        clubWorldCupTitles: 0
+    },
+    Tottenham: {
+        id: '038',
+        region: 'Europe',
+        country: 'England',
+        name: 'Tottenham',
+        nationalLeagueTitles: 2,
+        nationalCupTitles: 8,
+        uelOrSudamericanaTitles: 2,
+        uclOrLibertadoresTitles: 0,
+        clubWorldCupTitles: 0
+    },
+    Parma: {
+        id: '039',
+        region: 'Europe',
+        country: 'Italy',
+        name: 'Parma',
+        nationalLeagueTitles: 0,
+        nationalCupTitles: 3,
+        uelOrSudamericanaTitles: 2,
+        uclOrLibertadoresTitles: 0,
+        clubWorldCupTitles: 0
+    },
+    IpswichTown: {
+        id: '040',
+        region: 'Europe',
+        country: 'England',
+        name: 'Ipswich Town',
+        nationalLeagueTitles: 1,
+        nationalCupTitles: 1,
+        uelOrSudamericanaTitles: 1,
+        uclOrLibertadoresTitles: 0,
+        clubWorldCupTitles: 0
+    },
+    Ajax: {
+        id: '041',
+        region: 'Europe',
+        country: 'Netherlands',
+        name: 'Ajax',
+        nationalLeagueTitles: 36,
+        nationalCupTitles: 20,
+        uelOrSudamericanaTitles: 1,
+        uclOrLibertadoresTitles: 4,
+        clubWorldCupTitles: 0
+    },
+    Feyenoord: {
+        id: '042',
+        region: 'Europe',
+        country: 'Netherlands',
+        name: 'Feyenoord',
+        nationalLeagueTitles: 16,
+        nationalCupTitles: 13,
+        uelOrSudamericanaTitles: 2,
+        uclOrLibertadoresTitles: 1,
+        clubWorldCupTitles: 0
+    },
+    PSV: {
+        id: '043',
+        region: 'Europe',
+        country: 'Netherlands',
+        name: 'PSV',
+        nationalLeagueTitles: 24,
+        nationalCupTitles: 11,
+        uelOrSudamericanaTitles: 1,
+        uclOrLibertadoresTitles: 1,
+        clubWorldCupTitles: 0
+    },
+    Porto: {
+        id: '044',
+        region: 'Europe',
+        country: 'Portugal',
+        name: 'Porto',
+        nationalLeagueTitles: 30,
+        nationalCupTitles: 19,
+        uelOrSudamericanaTitles: 2,
+        uclOrLibertadoresTitles: 2,
+        clubWorldCupTitles: 0
+    },
+    Benfica: {
+        id: '045',
+        region: 'Europe',
+        country: 'Portugal',
+        name: 'Benfica',
+        nationalLeagueTitles: 38,
+        nationalCupTitles: 26,
+        uelOrSudamericanaTitles: 0,
+        uclOrLibertadoresTitles: 2,
+        clubWorldCupTitles: 0
+    },
+    Sporting: {
+        id: '046',
+        region: 'Europe',
+        country: 'Portugal',
+        name: 'Sporting',
+        nationalLeagueTitles: 19,
+        nationalCupTitles: 17,
+        uelOrSudamericanaTitles: 0,
+        uclOrLibertadoresTitles: 0,
+        clubWorldCupTitles: 0
+    },
+    Anderlecht: {
+        id: '047',
+        region: 'Europe',
+        country: 'Belgium',
+        name: 'Anderlecht',
+        nationalLeagueTitles: 34,
+        nationalCupTitles: 9,
+        uelOrSudamericanaTitles: 1,
+        uclOrLibertadoresTitles: 0,
+        clubWorldCupTitles: 0
+    },
+
+    
+    
 }
