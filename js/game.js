@@ -15,17 +15,7 @@ continueButton.onclick = () => {
     inputsContainer.classList.add('ongoing-game')
 }
 
-answerInput.addEventListener("keydown", clearSpan);
-
-let teamName = "";
-
-function startGame(){
-    const team = defineTeamToBeGuessed();
-    teamName = team.name.toLowerCase();
-    showTitles(team);
-}
-
-startGame();
+const teamName = startGame();
 
 function defineTeamToBeGuessed(){
     const teams = Object.keys(teamList);
@@ -35,9 +25,11 @@ function defineTeamToBeGuessed(){
     return team;
 }
 
-checkButton.addEventListener("click", checkAnswer);
-checkButton.onclick = () => {
-    window.scrollTo(0, 0);
+function startGame(){
+    const team = defineTeamToBeGuessed();
+    const teamName = team.name.toLowerCase();
+    showTitles(team);
+    return teamName;
 }
 
 function checkAnswer(){
@@ -55,6 +47,14 @@ function checkAnswer(){
     document.getElementById('result').innerHTML= 'wrong, keep trying!';
     }
 }
+
+checkButton.onclick = () => {
+    window.scrollTo(0, 0);
+}
+
+checkButton.addEventListener("click", checkAnswer);
+
+answerInput.addEventListener("keydown", clearSpan);
 
 function clearSpan(){
     document.getElementById('result').innerHTML= '';
