@@ -1,5 +1,3 @@
-/* SELECTING THE HTML ELEMENTS */
-
 // Header elements:
 
 export const navigationMenu = document.querySelector('#navigation-menu');
@@ -18,5 +16,3 @@ export const answerInput = document.querySelector('#answer-input');
 export const checkButton = document.querySelector("#check-button");
 export const textInput = document.getElementById("answer-input");
 export const insideGameContainer = document.querySelector('#inside-game-container');
-
-
