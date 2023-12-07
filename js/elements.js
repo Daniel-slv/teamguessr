@@ -1,18 +1,36 @@
 // Header elements:
 
-export const navigationMenu = document.querySelector('#navigation-menu');
-export const hamburgerButton = document.querySelector('#hamburger-button');
-export const settingsButton = document.querySelector('#settings-button');
+const navigationMenu = document.getElementById('navigation-menu');
+const hamburgerButton = document.getElementById('hamburger-button');
+const settingsButton = document.getElementById('settings-button');
 
 // Game elements:
 
-export const gameContainer = document.querySelector('#game-container');
-export const startGameButton = document.querySelector('#start-game-button');
-export const tutorialPopup = document.querySelector('#tutorial-popup');
-export const continueButton = document.querySelector('#continue-button');
-export const titleList = document.querySelector('#title-list');
-export const inputsContainer = document.querySelector('#inputs-container')
-export const answerInput = document.querySelector('#answer-input');
-export const checkButton = document.querySelector("#check-button");
-export const textInput = document.getElementById("answer-input");
-export const insideGameContainer = document.querySelector('#inside-game-container');
+const gameContainer = document.getElementById('game-container');
+const startGameButton = document.getElementById('start-game-button');
+const tutorialPopup = document.getElementById('tutorial-popup');
+const continueButton = document.getElementById('continue-button');
+const titleList = document.getElementById('title-list');
+const inputsContainer = document.getElementById('inputs-container')
+const answerInput = document.getElementById('answer-input');
+const checkButton = document.getElementById('check-button');
+const textInput = document.getElementById('answer-input');
+const insideGameContainer = document.getElementById('inside-game-container');
+
+// Exporting the elements:
+
+export {
+    navigationMenu,
+    hamburgerButton,
+    settingsButton,
+    gameContainer,
+    startGameButton,
+    tutorialPopup,
+    continueButton,
+    titleList,
+    inputsContainer,
+    answerInput,
+    checkButton,
+    textInput,
+    insideGameContainer
+}
