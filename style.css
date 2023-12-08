@@ -253,33 +253,33 @@ main{
     position: absolute;
     margin: 0 auto;
     top: 1.2rem;
-    text-justify: newspaper;
     font-size: 2rem;
-    letter-spacing: 0.2rem;
     color: #ffd800;
+    text-justify: newspaper;
+    letter-spacing: 0.2rem;
     text-shadow: 2px 2px 2px rgb(0, 0, 0);
 }
 
 #answer-input{
-    width: 65%;
     bottom: 0.8rem;
-    font-family: superCorn;
-    font-size: 1.35rem;
-    letter-spacing: 0.1rem;
-    color: rgb(189, 189, 189);
     padding: 0.5rem;
-    border-radius: 7px;
+    width: 65%;
     border: 1px solid #ffd800;
+    outline: none;
+    border-radius: 7px;
     box-sizing:  border-box;
     background: none;
+    font-family: superCorn;
+    font-size: 1.35rem;
+    color: rgb(189, 189, 189);
+    letter-spacing: 0.1rem;
     line-height: 1.35rem;
-    outline: none;
     text-align: center;
 }
 
 #answer-input:focus{
-    outline: 2px solid #ffd800;
     color: white;
+    outline: 2px solid #ffd800;
 }
 
 #score-container{
@@ -293,7 +293,6 @@ main{
     pointer-events: auto;
 }
 
-
 #score-container p{
     font-size: 1.5rem;
     color: #ffd800;
@@ -304,9 +303,9 @@ main{
     position: absolute;
     top: 2.25rem;
     left: 4.45rem;
+    width: 90%;
     list-style: disc;
     list-style-position: outside;
-    width: 90%;
 }
 
 #title-list.ongoing-game{
@@ -316,10 +315,10 @@ main{
 
 #title-list li{
     padding: 1.25rem 0;
-    text-align: left;
     font-size: 1.25rem;
-    letter-spacing: 0.1rem;
     color: rgb(240, 240, 240);
+    letter-spacing: 0.1rem;
+    text-align: left;
 }
 
 /* TUTORIAL POPUP */
@@ -328,13 +327,14 @@ main{
     position: absolute;
     flex-direction: column;
     width: 30rem;
-    padding: 0.2rem;
+    padding: 0.4rem 0.9rem;
     border-radius: 10px;
     background-color: rgb(240, 240, 240);
     color: #02220e;
     box-sizing: border-box;
     box-shadow: 5px 6px 8px 0px rgba(0, 0, 0, 0.82);
     transition: all 0.3s ease;
+    text-align: justify;
 }
 
 @media screen and (max-width: 700px) {
