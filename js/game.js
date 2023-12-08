@@ -1,15 +1,14 @@
 import {teamList} from './teamlist.js';
 import {
+    gameContainer,
+    insideGameContainer,
     startGameButton,
     tutorialPopup,
-    gameContainer,
     continueButton,
-    answerInput,
     titleList,
     inputsContainer,
-    checkButton,
-    textInput,
-    insideGameContainer
+    answerInput,
+    checkButton
 } from './elements.js';
 
 startGameButton.addEventListener('click', () => {
@@ -41,8 +40,12 @@ const startGame = () => {
     return teamName;
 };
 
+const clearSpan = () => {
+    document.getElementById('result').innerHTML = '';
+};
+
 const showTitles = (team) => {
-    let teamToBeGuessedTitles = `<li>${team.nationalLeagueTitles} National League Titles</li>
+    const teamToBeGuessedTitles = `<li>${team.nationalLeagueTitles} National League Titles</li>
     <li>${team.nationalCupTitles} National Cup Titles</li>
     <li>${team.uelOrSudamericanaTitles} UEL / Sudamericana Titles</li>
     <li>${team.uclOrLibertadoresTitles} UCL / Libertadores Titles</li>
@@ -53,7 +56,7 @@ const showTitles = (team) => {
 const teamName = startGame();
 
 const checkAnswer = () => {
-    const playerGuess = textInput.value.toLowerCase();
+    const playerGuess = answerInput.value.toLowerCase();
     const result = document.getElementById('result');
     if (playerGuess === teamName) {
         titleList.classList.remove('ongoing-game');
@@ -74,7 +77,3 @@ checkButton.addEventListener('click', () => {
 });
 
 answerInput.addEventListener('keydown', clearSpan);
-
-function clearSpan(){
-    document.getElementById('result').innerHTML= '';
-}
