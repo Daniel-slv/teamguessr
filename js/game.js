@@ -21,7 +21,6 @@ continueButton.addEventListener('click', () => {
     gameContainer.classList.remove('active');
     titleList.classList.add('ongoing-game');
     startGameButton.classList.add('ongoing-game');
-    answerInput.classList.add('ongoing-game');
     inputsContainer.classList.add('ongoing-game');
 });
 
@@ -58,8 +57,9 @@ const teamName = startGame();
 const checkAnswer = () => {
     const playerGuess = answerInput.value.toLowerCase();
     const result = document.getElementById('result');
-    if (playerGuess === teamName) {
+    if (playerGuess === teamName){
         titleList.classList.remove('ongoing-game');
+        inputsContainer.classList.remove('ongoing-game');
         result.innerHTML = 'correct!';
         insideGameContainer.innerHTML = `<button id="play-again-button" class="button">Play Again</button>`;
         const playAgainButton = document.querySelector('#play-again-button');

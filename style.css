@@ -215,6 +215,8 @@ main{
 }
 
 #inputs-container{
+    opacity: 0;
+    pointer-events: none;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -282,24 +284,8 @@ main{
     outline: 2px solid #ffd800;
 }
 
-#score-container{
-    position: absolute;
-    top: 1.2rem;
-    right: 3.25rem;
-}
-
-#score-container.ongoing-game{
-    opacity: 1;
-    pointer-events: auto;
-}
-
-#score-container p{
-    font-size: 1.5rem;
-    color: #ffd800;
-}
-
 #title-list{
-    width: 90%;
+    width: 95%;
     list-style: disc;
     list-style-position:inside;
 }
