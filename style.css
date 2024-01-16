@@ -163,8 +163,8 @@ main{
     position: relative;
     margin-top: 2rem;
     margin-bottom: 2rem;
-    width: 32rem;
-    height: 80vh;
+    width: 28rem;
+    height: 70vh;
     border: 0.15rem solid #ffd800;
     border-radius: 10px;
     transition: 0.3s ease;
@@ -184,8 +184,8 @@ main{
     flex-direction: column;
     position: relative;
     margin: 0 auto;
-    width: 25rem;
-    height: 60vh;
+    width: 22rem;
+    height: 50vh;
     text-align: center;
     border-radius: 10px;
     background-color: #05461d;
@@ -299,10 +299,7 @@ main{
 }
 
 #title-list{
-    display: block;
-    position: absolute;
-    top: 2.25rem;
-    left: 4.45rem;
+    margin-left: 3rem;
     width: 90%;
     list-style: disc;
     list-style-position: outside;
