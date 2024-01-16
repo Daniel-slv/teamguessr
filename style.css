@@ -347,8 +347,7 @@ main{
         width: 70vw;
     }
     #title-list{
-        top: 0.75rem;
-        left: 1.75rem;
+        margin-left: 2rem;
     }
     #inputs-container{
         height: 1.25rem;
