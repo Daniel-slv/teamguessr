@@ -299,10 +299,9 @@ main{
 }
 
 #title-list{
-    margin-left: 3rem;
     width: 90%;
     list-style: disc;
-    list-style-position: outside;
+    list-style-position:inside;
 }
 
 #title-list.ongoing-game{
@@ -315,7 +314,7 @@ main{
     font-size: 1.25rem;
     color: rgb(240, 240, 240);
     letter-spacing: 0.1rem;
-    text-align: left;
+
 }
 
 /* TUTORIAL POPUP */
@@ -334,7 +333,7 @@ main{
     text-align: justify;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 500px) {
     #tutorial-popup{
         width: 90vw;
     }
@@ -345,9 +344,6 @@ main{
     #inside-game-container{
         height: 55vh;
         width: 70vw;
-    }
-    #title-list{
-        margin-left: 2rem;
     }
     #inputs-container{
         height: 1.25rem;
