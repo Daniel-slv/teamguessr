@@ -11,10 +11,12 @@ import {
     checkButton
 } from './elements.js';
 
-startGameButton.addEventListener('click', () => {
+const showTutorial = () => {
     tutorialPopup.classList.add('active');
     gameContainer.classList.add('active');
-});
+};
+
+startGameButton.addEventListener('click', showTutorial);
 
 continueButton.addEventListener('click', () => {
     tutorialPopup.classList.remove('active');
@@ -24,56 +26,59 @@ continueButton.addEventListener('click', () => {
     inputsContainer.classList.add('ongoing-game');
 });
 
-const defineTeamToBeGuessed = () => {
-    const teams = Object.keys(teamList);
-    const len = teams.length;
-    const rnd = Math.floor(Math.random() * len);
-    const team = teamList[teams[rnd]];
-    return team;
+const defineTeamToBeGuessedTeam = () => {
+    const teams = Object.values(teamList);
+    const randomIndex = Math.floor(Math.random() * teams.length);
+    return teams[randomIndex];
 };
 
-const startGame = () => {
-    const team = defineTeamToBeGuessed();
-    const teamName = team.name.toLowerCase();
-    showTitles(team);
-    return teamName;
-};
+const team = defineTeamToBeGuessedTeam();
+const teamName = team.name.toLowerCase();
 
-const clearSpan = () => {
-    document.getElementById('result').innerHTML = '';
-};
-
-const showTitles = (team) => {
-    const teamToBeGuessedTitles = `<li>${team.nationalLeagueTitles} National League Titles</li>
-    <li>${team.nationalCupTitles} National Cup Titles</li>
-    <li>${team.uelOrSudamericanaTitles} UEL / Sudamericana Titles</li>
-    <li>${team.uclOrLibertadoresTitles} UCL / Libertadores Titles</li>
-    <li>${team.clubWorldCupTitles} Club World Cup Titles</li>`;
+const showTitles = () => {
+    const teamToBeGuessedTitles =
+        `<li>${team.nationalLeagueTitles} National League Titles</li>
+        <li>${team.nationalCupTitles} National Cup Titles</li>
+        <li>${team.uelOrSudamericanaTitles} UEL / Sudamericana Titles</li>
+        <li>${team.uclOrLibertadoresTitles} UCL / Libertadores Titles</li>
+        <li>${team.clubWorldCupTitles} Club World Cup Titles</li>`;
     titleList.innerHTML = teamToBeGuessedTitles;
 };
 
-const teamName = startGame();
+showTitles();
+
+const clearResult = () => {
+    document.getElementById('result').innerHTML = '';
+};
 
 const checkAnswer = () => {
     const playerGuess = answerInput.value.toLowerCase();
     const result = document.getElementById('result');
-    if (playerGuess === teamName){
+
+    if (playerGuess === teamName) {
         titleList.classList.remove('ongoing-game');
         inputsContainer.classList.remove('ongoing-game');
         result.innerHTML = 'correct!';
-        insideGameContainer.innerHTML = `<button id="play-again-button" class="button">Play Again</button>`;
-        const playAgainButton = document.querySelector('#play-again-button');
-        playAgainButton.addEventListener('click', () => {
-        location.reload();
-        });
+        insideGameContainer.innerHTML =
+        `<button id="play-again-button" class="button">Play Again</button>`;
     } else {
         result.innerHTML = 'wrong, keep trying!';
     }
 };
+
+const playAgain = () => {
+    location.reload();
+};
+
+insideGameContainer.addEventListener('click', (event) => {
+    if (event.target.id === 'play-again-button') {
+        playAgain();
+    }
+});
 
 checkButton.addEventListener('click', () => {
     window.scrollTo(0, 0);
     checkAnswer();
 });
 
-answerInput.addEventListener('keydown', clearSpan);
+answerInput.addEventListener('keydown', clearResult);
