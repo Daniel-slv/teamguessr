@@ -319,7 +319,7 @@ main{
 
 @media screen and (max-width: 768px) {
     #tutorial-popup{
-        width: clamp(400px, 75vw, 500px);
+        width: clamp(350px, 75vw, 500px);
     }
     #game-container{
         width: 82vw;
@@ -331,7 +331,6 @@ main{
     }
     #title-list li{
         padding: 0.80rem 0;
-        font-size: 1.25rem;
     }
     #inputs-container{
         height: 1.25rem;
